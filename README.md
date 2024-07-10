@@ -20,6 +20,10 @@ Import the Logger module in your component or any JavaScript file where you want
 ```javascript
 import Logger from '@renanmalato/logger-plus';
 ```
+### Image of the package logging
+
+![Print Screen](./assets/logger-printscreen.jpg)
+
 
 ### Logging Methods
 
