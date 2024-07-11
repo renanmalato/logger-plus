@@ -3,6 +3,13 @@
 
 This custom logger provides a breathable and consistent way to log messages with different levels of severity (info, success, warning, error) and includes timestamps for each log entry. It is a very light weight library designed specifically for React Native and Expo projects.
 
+## Support
+
+If you find this package helpful, consider supporting me by buying me a coffee.
+
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg)](https://www.buymeacoffee.com/renanmalato)
+
+
 ## Installation
 
 First, ensure you have the `@renanmalato/logger-plus` package in your project by installing it via npm:
@@ -22,7 +29,7 @@ import Logger from '@renanmalato/logger-plus';
 ```
 ### Image of the package logging
 
-![Print Screen](./assets/logger-printscreen.jpg)
+![Print Screen](https://github.com/renanmalato/logger-plus/blob/main/assets/logger-printscreen.jpg)
 
 
 ### Logging Methods
@@ -32,25 +39,25 @@ The Logger provides several methods for logging messages:
 1st Case: Message and Screen name
 
 - `Logger.log('Message goes here', 'Screen or Function Name');`
-![logger log message and function screen name](./assets/logger-log-msg-screen.jpg)
+![logger log message and function screen name](https://github.com/renanmalato/logger-plus/blob/main/assets/logger-log-msg-screen.jpg)
 
 
 2nd Case: Message and Screen name
 
 - `Logger.info('Message goes here', 'Screen or Function Name', variable);`
-![logger log message and function screen name](./assets/logger-info-msg-screen.jpg)
+![logger log message and function screen name](https://github.com/renanmalato/logger-plus/blob/main/assets/logger-info-msg-screen.jpg)
 
 
 3rd Case: Logs only Message
 
 - `Logger.info('Message goes here');`
-![logger image](./assets/logger-only-message.jpg)
+![logger image](https://github.com/renanmalato/logger-plus/blob/main/assets/logger-only-message.jpg)
 
 
 4th Case: Log Success with Object
 
 - `Logger.success('Message goes here', 'Screen or Function Name', object);`
-![logger image](./assets/logger-success-object.jpg)
+![logger image](https://github.com/renanmalato/logger-plus/blob/main/assets/logger-success-object.jpg)
 
 
 - `Logger.log(message, screenOrFunction, ...messages)`
