@@ -10,7 +10,7 @@ If you have something to contribute please visit our GitHub repository. If you c
 <div style="display: flex; gap: 10px; align-items: center;">
   
 <a href="https://www.buymeacoffee.com/renanmalato" target="_blank">
-        <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" alt="Buy Me A Coffee" style="width: auto; height: 45;">
+        <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" alt="Buy Me A Coffee" style="width: 140; height: 45;">
     </a>
   
 <a href="https://github.com/renanmalato/logger-plus" target="_blank">
@@ -48,12 +48,12 @@ import Logger from '@renanmalato/logger-plus';
 <img src="https://github.com/renanmalato/logger-plus/blob/main/assets/logger-printscreen.jpg" alt="Print in Action" style="border-radius: 10px;">
 
 
-
+<br>
 ### Logging Methods
 
 The Logger provides several methods for logging messages:
 
-<br><br>
+<br>
 
 <strong>• 1st Case: Message and Screen name</strong>
 
@@ -91,7 +91,7 @@ The Logger provides several methods for logging messages:
 
 
 
-** More cases... **
+<br><br>More cases...
 
 - `Logger.log(message, screenOrFunction, ...messages)`
 - `Logger.success(message, screenOrFunction, ...messages)`
