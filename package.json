@@ -1,6 +1,6 @@
 {
   "name": "@renanmalato/logger-plus",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A powerful and easy-to-use logging utility for React Native and Expo applications. @renanmalato/logger-plus provides a consistent way to log messages with different levels of severity (info, success, warning, error) and includes timestamps for each log entry. Designed specifically for mobile applications, it ensures that logs are clear, concise, and easy to track. Perfect for developers looking to maintain clean and informative logs in their React Native and Expo projects.",
   "main": "loggerPlus.js",
   "types": "loggerPlus.d.ts",

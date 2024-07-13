@@ -15,7 +15,7 @@ If you have something to contribute please visit our GitHub repository. If you c
 <div style="display: flex; gap: 10px; align-items: center;">
   
 <a href="https://www.buymeacoffee.com/renanmalato" target="_blank">
-        <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" alt="Buy Me A Coffee" style="width: 130px; height: 40px;">
+        <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" alt="Buy Me A Coffee" style="width: 50%">
     </a>
   
 <a href="https://github.com/renanmalato/logger-plus" target="_blank">
@@ -113,6 +113,9 @@ The Logger provides several methods for logging messages:
 - `Logger.warning(message, screenOrFunction, ...messages)`
 - `Logger.error(message, screenOrFunction, ...messages)`
 - `Logger.line(message, ...messages)`
+- `Logger.box(message, ...messages)`
+
+
 
 *(knowing issue - Logger.line in some screens warn no formatText variable found. Working on it. Use Logger.log for more simple logging instead or console.log)*
 
@@ -156,6 +159,10 @@ Logger.error('Failed to fetch data:', 'DataScreen', variable);
 
 // Line log (without source)
 Logger.line('This is a simple line log');
+
+// Line box
+Logger.box('This is a simple line log');
+
 ```
 
 #### Detailed Example
@@ -183,6 +190,8 @@ const ExampleComponent = () => {
     Logger.error('Error: Something went wrong with cart count', 'CartScreen', variable);
     Logger.log('Logging a simple message');
     Logger.line('This is a simple line log');
+    Logger.box('Debug Here');
+
   }, []);
 
   return (
