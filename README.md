@@ -10,7 +10,7 @@ If you have something to contribute please visit our GitHub repository. If you c
 <div style="display: flex; gap: 10px; align-items: center;">
   
 <a href="https://www.buymeacoffee.com/renanmalato" target="_blank">
-        <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" alt="Buy Me A Coffee" style="width: 150px; height: auto;">
+        <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" alt="Buy Me A Coffee" style="width: auto; height: 45;">
     </a>
   
 <a href="https://github.com/renanmalato/logger-plus" target="_blank">
@@ -53,36 +53,35 @@ import Logger from '@renanmalato/logger-plus';
 
 The Logger provides several methods for logging messages:
 
+<br><br>
 
-
-** • 1st Case: Message and Screen name **
+<strong>• 1st Case: Message and Screen name</strong>
 
 - `Logger.log('Message goes here', 'Screen or Function Name');`
-   
+   <br>
 <img src="https://github.com/renanmalato/logger-plus/blob/main/assets/logger-log-msg-screen.jpg" alt="Logger message and function screen name" style="border-radius: 10px;">
 
 
 
-
-** • 2nd Case: Message, Screen name and Variable **
+<br><br>
+<strong> • 2nd Case: Message, Screen name and Variable </strong>
 
 - `Logger.info('Message goes here', 'Screen or Function Name', variable);`
-    
+    <br>
 <img src="https://github.com/renanmalato/logger-plus/blob/main/assets/logger-info-msg-screen.jpg" alt="logger log message and function screen name and variable" style="border-radius: 10px;">
     
 
 
-
-** • 3rd Case: Logs only Message **
+<br><br>
+<strong>• 3rd Case: Logs only Message </strong>
 
 - `Logger.info('Message goes here');`
-
+<br>
 <img src="https://github.com/renanmalato/logger-plus/blob/main/assets/logger-only-message.jpg" alt="Logs only Message" style="border-radius: 10px;">
 
 
-
-
-** • 4th Case: Log Success with Object **
+<br><br>
+<strong> • 4th Case: Log Success with Object </strong>
 
 - `Logger.success('Message goes here', 'Screen or Function Name', object);`
 
