@@ -6,12 +6,12 @@ const getCurrentTimestamp = () => {
 const formatMessage = (msg) => {
   if (typeof msg === 'object') {
     try {
-      return JSON.stringify(msg, null, 2);
+      return JSON.stringify(msg, null, 2).split('\n');
     } catch (e) {
-      return '[Unable to stringify object]';
+      return ['[Unable to stringify object]'];
     }
   }
-  return msg;
+  return [msg];
 };
 
 const logBase = (type, emoji, message, screenOrFunction = '(not called)', ...messages) => {
@@ -24,15 +24,13 @@ const logBase = (type, emoji, message, screenOrFunction = '(not called)', ...mes
 
   console.group('');
   console[type]('---------------------------------');
-  if (screenOrFunction) {
-    console[type](`${emoji} from ${screenOrFunction}`);
-    console[type]('---------------------------------');
-  }
+  console[type](`${emoji} from ${screenOrFunction}`);
+  console[type]('---------------------------------');
   console[type]('');
-  console[type](formatMessage(message));
+  formatMessage(message).forEach(line => console[type](line));
   messages.forEach(msg => {
     if (msg !== undefined && msg !== '') {
-      console[type](formatMessage(msg));
+      formatMessage(msg).forEach(line => console[type](line));
     }
   });
   console[type](`[${timestamp}]`);
@@ -49,20 +47,18 @@ const logError = (message, screenOrFunction = '(not called)', ...messages) => {
   }
 
   console.group('');
-  console.log('---------------------------------');
-  if (screenOrFunction) {
-    console.log(`❌ from ${screenOrFunction}`);
-    console.log('---------------------------------');
-  }
-  console.log('');
-  console.error(formatMessage(message));
+  console.error('---------------------------------');
+  console.error(`❌ from ${screenOrFunction}`);
+  console.error('---------------------------------');
+  console.error('');
+  formatMessage(message).forEach(line => console.error(line));
   messages.forEach(msg => {
     if (msg !== undefined && msg !== '') {
-      console.error(formatMessage(msg));
+      formatMessage(msg).forEach(line => console.error(line));
     }
   });
-  console.log(`[${timestamp}]`);
-  console.log('');
+  console.error(`[${timestamp}]`);
+  console.error('');
   console.groupEnd();
 };
 
@@ -75,21 +71,83 @@ const logWarn = (message, screenOrFunction = '(not called)', ...messages) => {
   }
 
   console.group('');
-  console.log('---------------------------------');
-  if (screenOrFunction) {
-    console.log(`⚠️ from ${screenOrFunction}`);
-    console.log('---------------------------------');
-  }
-  console.log('');
-  console.warn(formatMessage(message));
+  console.warn('---------------------------------');
+  console.warn(`⚠️ from ${screenOrFunction}`);
+  console.warn('---------------------------------');
+  console.warn('');
+  formatMessage(message).forEach(line => console.warn(line));
   messages.forEach(msg => {
     if (msg !== undefined && msg !== '') {
-      console.warn(formatMessage(msg));
+      formatMessage(msg).forEach(line => console.warn(line));
+    }
+  });
+  console.warn(`[${timestamp}]`);
+  console.warn('');
+  console.groupEnd();
+};
+
+const line = (message, ...messages) => {
+  const timestamp = getCurrentTimestamp();
+
+  console.group('');
+  formatMessage(message).forEach(line => console.log(line));
+  messages.forEach(msg => {
+    if (msg !== undefined && msg !== '') {
+      formatMessage(msg).forEach(line => console.log(line));
     }
   });
   console.log(`[${timestamp}]`);
-  console.log('');
+  console.log('----------------------------------');
   console.groupEnd();
+};
+
+const printBox = (...lines) => {
+  const timestamp = getCurrentTimestamp();
+  const timestampFormatted = `[${timestamp}]`;
+  
+  // Convert objects to strings
+  lines = lines.map(line => {
+    if (typeof line === 'object') {
+      try {
+        return JSON.stringify(line, null, 2).split('\n').map(line => `${line.trim()}`).join('\n');
+      } catch (e) {
+        return '[Unable to stringify object]';
+      }
+    }
+    return line;
+  }).flat();
+
+  console.group(''); // Add group
+
+  // Find the longest line length
+  const maxLength = Math.max(...lines.map(line => line.length), timestampFormatted.length);
+
+  // Create the top border
+  let topBorder = '╔' + '═'.repeat(maxLength + 2) + '╗';
+  console.log(topBorder);
+
+  // Add a line spacer at the top
+  let lineSpacer = '║' + ' '.repeat(maxLength + 2) + '║';
+  console.log(lineSpacer);
+
+  // Create each line with padding
+  lines.forEach(line => {
+    console.log(lineSpacer);
+    let padding = ' '.repeat(maxLength - line.length);
+    console.log(`║ ${line}${padding} ║`);
+  });
+
+  // Add the timestamp
+  console.log(lineSpacer);
+  let timestampPadding = ' '.repeat(maxLength - timestampFormatted.length);
+  console.log(`║ ${timestampFormatted}${timestampPadding} ║`);
+  console.log(lineSpacer);
+
+  // Create the bottom border
+  let bottomBorder = '╚' + '═'.repeat(maxLength + 2) + '╝';
+  console.log(bottomBorder);
+
+  console.groupEnd(); // End group
 };
 
 const log = (message, screenOrFunction = '(not called)', ...messages) => logBase('log', '', message, screenOrFunction, ...messages);
@@ -98,18 +156,8 @@ const info = (message, screenOrFunction = '(not called)', ...messages) => logBas
 const warn = (message, screenOrFunction = '(not called)', ...messages) => logWarn(message, screenOrFunction, ...messages);
 const error = (message, screenOrFunction = '(not called)', ...messages) => logError(message, screenOrFunction, ...messages);
 
-const line = (message, ...messages) => {
-  const timestamp = getCurrentTimestamp();
-  console.group('');
-  console.log(formatMessage(message));
-  messages.forEach(msg => {
-    if (msg !== undefined && msg !== '') {
-      console.log(formatMessage(msg));
-    }
-  });
-  console.log(`[${timestamp}]`);
-  console.log('----------------------------------');
-  console.groupEnd();
+const box = (...lines) => {
+  printBox(...lines);
 };
 
 const Logger = {
@@ -119,6 +167,7 @@ const Logger = {
   warn,
   error,
   line,
+  box,
 };
 
 export default Logger;

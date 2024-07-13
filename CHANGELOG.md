@@ -17,3 +17,13 @@
 ## [1.0.10/11] - 2024-07-10
 ### Fixed
 - Changes in Readme
+
+## [1.1.0] - 2024-07-10
+### Added
+- Logger.box - for designed BOX logged separation when a screen get's focus or other functionalities idea
+
+### Fixed
+- Other Logger.(functions) fixed the Object to log each key with -LOG- label
+
+### Improved
+- Redme.md

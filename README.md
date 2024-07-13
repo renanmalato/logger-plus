@@ -3,6 +3,11 @@
 
 This custom logger provides a breathable and consistent way to log messages with different levels of severity (info, success, warn, error) and includes timestamps for each log entry. It is a very light weight library designed specifically for React Native and Expo projects.
 
+<img src="https://github.com/renanmalato/logger-plus/blob/main/assets/logo.jpg" alt="logo" style="border-radius: 10px;">
+
+
+
+
 ## Discussion and Support
 
 If you have something to contribute please visit our GitHub repository. If you consider this package helpful also you can consider support on the Buy Me a Coffee shield.
@@ -89,6 +94,14 @@ The Logger provides several methods for logging messages:
 <img src="https://github.com/renanmalato/logger-plus/blob/main/assets/logger-success-object.jpg" alt="Log Success" style="border-radius: 10px;">
 
 
+
+
+<br><br>
+<strong> • 5th Case: Log Box </strong>
+
+- `Logger.box('Debug here', 'Screen or Function Name');`
+
+<img src="https://github.com/renanmalato/logger-plus/blob/main/assets/logger-box.jpg" alt="Log Success" style="border-radius: 10px;">
 
 
 
