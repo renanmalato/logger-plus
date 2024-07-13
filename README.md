@@ -9,15 +9,15 @@ If you have something to contribute please visit our GitHub repository. If you c
 
 <div style="display: flex; gap: 10px; align-items: center;">
   
-    <a href="https://www.buymeacoffee.com/renanmalato" target="_blank">
+<a href="https://www.buymeacoffee.com/renanmalato" target="_blank">
         <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" alt="Buy Me A Coffee" style="width: 150px; height: auto;">
     </a>
   
-     <a href="https://github.com/renanmalato/logger-plus" target="_blank">
+<a href="https://github.com/renanmalato/logger-plus" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository" style="width: auto; height: 45px;">
     </a>
   
-    <a href="https://www.npmjs.com/package/@renanmalato/logger-plus" target="_blank">
+<a href="https://www.npmjs.com/package/@renanmalato/logger-plus" target="_blank">
         <img src="https://img.shields.io/npm/v/@renanmalato/logger-plus?style=flat-square" alt="NPM Version" style="width: auto; height: 45px;">
     </a>
   
@@ -45,7 +45,7 @@ import Logger from '@renanmalato/logger-plus';
 
 ### Image of the package logging
 
-<img src="https://github.com/renanmalato/logger-plus/blob/main/assets/logger-printscreen.jpg" alt="Print in Action" border-radius: 10px;">
+<img src="https://github.com/renanmalato/logger-plus/blob/main/assets/logger-printscreen.jpg" alt="Print in Action" style="border-radius: 10px;">
 
 
 
@@ -59,7 +59,7 @@ The Logger provides several methods for logging messages:
 
 - `Logger.log('Message goes here', 'Screen or Function Name');`
    
-    <img src="https://github.com/renanmalato/logger-plus/blob/main/assets/logger-log-msg-screen.jpg" alt="Logger message and function screen name" style="border-radius: 10px;">
+<img src="https://github.com/renanmalato/logger-plus/blob/main/assets/logger-log-msg-screen.jpg" alt="Logger message and function screen name" style="border-radius: 10px;">
 
 
 
@@ -68,7 +68,7 @@ The Logger provides several methods for logging messages:
 
 - `Logger.info('Message goes here', 'Screen or Function Name', variable);`
     
-    <img src="https://github.com/renanmalato/logger-plus/blob/main/assets/logger-info-msg-screen.jpg" alt="logger log message and function screen name and variable" style="border-radius: 10px;">
+<img src="https://github.com/renanmalato/logger-plus/blob/main/assets/logger-info-msg-screen.jpg" alt="logger log message and function screen name and variable" style="border-radius: 10px;">
     
 
 
