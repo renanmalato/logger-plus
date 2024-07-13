@@ -10,7 +10,7 @@ If you have something to contribute please visit our GitHub repository. If you c
 <div style="display: flex; gap: 10px; align-items: center;">
   
 <a href="https://www.buymeacoffee.com/renanmalato" target="_blank">
-        <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" alt="Buy Me A Coffee" style="width: 140; height: 45;">
+        <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" alt="Buy Me A Coffee" style="width: auto; height: 45px;">
     </a>
   
 <a href="https://github.com/renanmalato/logger-plus" target="_blank">
@@ -49,6 +49,7 @@ import Logger from '@renanmalato/logger-plus';
 
 
 <br>
+
 ### Logging Methods
 
 The Logger provides several methods for logging messages:
