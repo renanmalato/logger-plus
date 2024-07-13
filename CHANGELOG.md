@@ -14,6 +14,6 @@
 - Fixed Error and Warning logging just 1 line
 - Readme better
 
-## [1.0.10] - 2024-07-10
+## [1.0.10/11] - 2024-07-10
 ### Fixed
 - Changes in Readme
