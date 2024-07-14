@@ -170,5 +170,9 @@ const Logger = {
   box,
 };
 
-module.exports = Logger;
-export default Logger;
+// UMD pattern to support both CommonJS and ES Modules
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+  module.exports = Logger;
+} else {
+  window.Logger = Logger;
+}

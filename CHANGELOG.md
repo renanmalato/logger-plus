@@ -38,3 +38,11 @@ __________________________
 
 ### Improved
 - Redme.md
+
+## [1.2.1] - 2024-07-10
+
+### Fixed
+- condition check to export for CommonJS
+
+### Improved
+- Redme.md
