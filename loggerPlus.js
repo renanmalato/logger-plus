@@ -35,10 +35,7 @@ const logBase = (type, emoji, message, screenOrFunction = '(not called)', ...mes
   messages.forEach(msg => {
     if (msg !== undefined && msg !== '') {
       const msgLines = formatMessage(msg);
-      console[type](msgLines[0]);
-      for (let i = 1; i < msgLines.length; i++) {
-        console.log(msgLines[i]);
-      }
+      msgLines.forEach(line => console.log(line));
     }
   });
   console[type](`[${timestamp}]`);
@@ -67,10 +64,7 @@ const logError = (message, screenOrFunction = '(not called)', ...messages) => {
   messages.forEach(msg => {
     if (msg !== undefined && msg !== '') {
       const msgLines = formatMessage(msg);
-      console.error(msgLines[0]);
-      for (let i = 1; i < msgLines.length; i++) {
-        console.log(msgLines[i]);
-      }
+      msgLines.forEach(line => console.log(line));
     }
   });
   console.log(`[${timestamp}]`);
@@ -99,10 +93,7 @@ const logWarn = (message, screenOrFunction = '(not called)', ...messages) => {
   messages.forEach(msg => {
     if (msg !== undefined && msg !== '') {
       const msgLines = formatMessage(msg);
-      console.warn(msgLines[0]);
-      for (let i = 1; i < msgLines.length; i++) {
-        console.log(msgLines[i]);
-      }
+      msgLines.forEach(line => console.log(line));
     }
   });
   console.log(`[${timestamp}]`);

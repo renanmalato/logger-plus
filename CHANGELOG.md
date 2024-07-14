@@ -58,3 +58,8 @@ __________________________
 
 ### Fixed
 - logging error and warning by itself just in 1 line other subsequent lines of this cases are LOG
+
+## [1.2.4] - 2024-07-14
+
+### Fixed
+- logging error and warning by itself just in 1 line other subsequent lines of this cases are LOG, even the variable was being logged with console.error or warn, now just the 1st argument message should 
