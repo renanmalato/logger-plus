@@ -31,7 +31,7 @@
 __________________________
 
 
-## [1.2.0] - 2024-07-10
+## [1.2.0] - 2024-07-14
 
 ### Fixed
 - Imports for CommonJS
@@ -39,10 +39,17 @@ __________________________
 ### Improved
 - Redme.md
 
-## [1.2.1] - 2024-07-10
+
+## [1.2.1] - 2024-07-14
 
 ### Fixed
 - condition check to export for CommonJS
 
 ### Improved
 - Redme.md
+
+
+## [1.2.2] - 2024-07-14
+
+### Fixed
+- typeScript file to follow last changes

@@ -1,7 +1,7 @@
 
 # @renanmalato/logger-plus
 
-This custom logger provides a breathable and consistent way to log messages with different levels of severity (info, success, warn, error) and includes timestamps for each log entry. It is a very light weight library designed specifically for React Native and Expo projects.
+This custom logger provides a breathable and consistent way to log messages with different levels of severity (info, success, warn, error) and includes timestamps for each log entry. It is a very light weight library designed specifically for React Native and Expo projects Javascript but it also can be used in TypeScript and CommonJS.
 
 <img src="https://github.com/renanmalato/logger-plus/blob/main/assets/logo.jpg" alt="logo" style="border-radius: 10px;">
 
