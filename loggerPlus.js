@@ -170,4 +170,5 @@ const Logger = {
   box,
 };
 
+module.exports = Logger;
 export default Logger;

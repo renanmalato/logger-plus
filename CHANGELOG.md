@@ -27,3 +27,14 @@
 
 ### Improved
 - Redme.md
+
+__________________________
+
+
+## [1.2.0] - 2024-07-10
+
+### Fixed
+- Imports for CommonJS
+
+### Improved
+- Redme.md

@@ -42,11 +42,20 @@ npm install @renanmalato/logger-plus
 
 ### Importing the Logger
 
-Import the Logger module in your component or any JavaScript file where you want to use it:
+For React Native Import using Expo:
 
 ```javascript
 import Logger from '@renanmalato/logger-plus';
 ```
+
+
+For Common Javascript (CommonJS):
+
+```javascript
+const Logger = require('@renanmalato/logger-plus');
+```
+
+
 
 ### Image of the package logging
 
