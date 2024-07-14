@@ -53,3 +53,8 @@ __________________________
 
 ### Fixed
 - typeScript file to follow last changes
+
+## [1.2.3] - 2024-07-14
+
+### Fixed
+- logging error and warning by itself just in 1 line other subsequent lines of this cases are LOG

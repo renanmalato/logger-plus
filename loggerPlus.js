@@ -27,10 +27,18 @@ const logBase = (type, emoji, message, screenOrFunction = '(not called)', ...mes
   console[type](`${emoji} from ${screenOrFunction}`);
   console[type]('---------------------------------');
   console[type]('');
-  formatMessage(message).forEach(line => console[type](line));
+  const lines = formatMessage(message);
+  console[type](lines[0]);
+  for (let i = 1; i < lines.length; i++) {
+    console.log(lines[i]);
+  }
   messages.forEach(msg => {
     if (msg !== undefined && msg !== '') {
-      formatMessage(msg).forEach(line => console[type](line));
+      const msgLines = formatMessage(msg);
+      console[type](msgLines[0]);
+      for (let i = 1; i < msgLines.length; i++) {
+        console.log(msgLines[i]);
+      }
     }
   });
   console[type](`[${timestamp}]`);
@@ -47,18 +55,26 @@ const logError = (message, screenOrFunction = '(not called)', ...messages) => {
   }
 
   console.group('');
-  console.error('---------------------------------');
-  console.error(`❌ from ${screenOrFunction}`);
-  console.error('---------------------------------');
-  console.error('');
-  formatMessage(message).forEach(line => console.error(line));
+  console.log('---------------------------------');
+  console.log(`❌ from ${screenOrFunction}`);
+  console.log('---------------------------------');
+  console.log('');
+  const lines = formatMessage(message);
+  console.error(lines[0]);
+  for (let i = 1; i < lines.length; i++) {
+    console.log(lines[i]);
+  }
   messages.forEach(msg => {
     if (msg !== undefined && msg !== '') {
-      formatMessage(msg).forEach(line => console.error(line));
+      const msgLines = formatMessage(msg);
+      console.error(msgLines[0]);
+      for (let i = 1; i < msgLines.length; i++) {
+        console.log(msgLines[i]);
+      }
     }
   });
-  console.error(`[${timestamp}]`);
-  console.error('');
+  console.log(`[${timestamp}]`);
+  console.log('');
   console.groupEnd();
 };
 
@@ -71,18 +87,26 @@ const logWarn = (message, screenOrFunction = '(not called)', ...messages) => {
   }
 
   console.group('');
-  console.warn('---------------------------------');
-  console.warn(`⚠️ from ${screenOrFunction}`);
-  console.warn('---------------------------------');
-  console.warn('');
-  formatMessage(message).forEach(line => console.warn(line));
+  console.log('---------------------------------');
+  console.log(`⚠️ from ${screenOrFunction}`);
+  console.log('---------------------------------');
+  console.log('');
+  const lines = formatMessage(message);
+  console.warn(lines[0]);
+  for (let i = 1; i < lines.length; i++) {
+    console.log(lines[i]);
+  }
   messages.forEach(msg => {
     if (msg !== undefined && msg !== '') {
-      formatMessage(msg).forEach(line => console.warn(line));
+      const msgLines = formatMessage(msg);
+      console.warn(msgLines[0]);
+      for (let i = 1; i < msgLines.length; i++) {
+        console.log(msgLines[i]);
+      }
     }
   });
-  console.warn(`[${timestamp}]`);
-  console.warn('');
+  console.log(`[${timestamp}]`);
+  console.log('');
   console.groupEnd();
 };
 
