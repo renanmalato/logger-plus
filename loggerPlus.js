@@ -6,7 +6,7 @@ const getCurrentTimestamp = () => {
 const formatMessage = (msg) => {
   if (typeof msg === 'object') {
     try {
-      return JSON.stringify(msg, null, 2).split('\n');
+      return JSON.stringify(msg, null, 2).split('\n').map(line => line.trim());
     } catch (e) {
       return ['[Unable to stringify object]'];
     }
@@ -124,7 +124,7 @@ const printBox = (...lines) => {
   lines = lines.map(line => {
     if (typeof line === 'object') {
       try {
-        return JSON.stringify(line, null, 2).split('\n').map(line => `${line.trim()}`).join('\n');
+        return JSON.stringify(line, null, 2).split('\n').map(subLine => subLine.trim());
       } catch (e) {
         return '[Unable to stringify object]';
       }

@@ -170,7 +170,7 @@ Logger.error('Failed to fetch data:', 'DataScreen', variable);
 Logger.line('This is a simple line log');
 
 // Line box
-Logger.box('This is a simple line log');
+Logger.box('This is a box log');
 
 ```
 
