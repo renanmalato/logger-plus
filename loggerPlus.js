@@ -38,6 +38,7 @@ const logBase = (type, emoji, message, screenOrFunction = '(not called)', ...mes
       msgLines.forEach(line => console.log(line));
     }
   });
+  console.log(''); // Add a line break before the timestamp
   console[type](`[${timestamp}]`);
   console[type]('');
   console.groupEnd();
@@ -67,6 +68,7 @@ const logError = (message, screenOrFunction = '(not called)', ...messages) => {
       msgLines.forEach(line => console.log(line));
     }
   });
+  console.log(''); // Add a line break before the timestamp
   console.log(`[${timestamp}]`);
   console.log('');
   console.groupEnd();
@@ -96,6 +98,7 @@ const logWarn = (message, screenOrFunction = '(not called)', ...messages) => {
       msgLines.forEach(line => console.log(line));
     }
   });
+  console.log(''); // Add a line break before the timestamp
   console.log(`[${timestamp}]`);
   console.log('');
   console.groupEnd();
@@ -111,6 +114,7 @@ const line = (message, ...messages) => {
       formatMessage(msg).forEach(line => console.log(line));
     }
   });
+  console.log(''); // Add a line break before the timestamp
   console.log(`[${timestamp}]`);
   console.log('----------------------------------');
   console.groupEnd();
