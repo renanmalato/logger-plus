@@ -117,3 +117,11 @@ __________________________
 - Box method was having trouble to log complex objects, null or undefined
 
 - Fixed not throwing error when Logging undefined, null, and complex objects in all cases
+
+__________________________
+
+## [1.2.8] - 2024-07-19
+
+### Fixed - 1.2.8
+
+- Added 1 more fall back to 1.2.7 to fix

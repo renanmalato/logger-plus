@@ -4,9 +4,6 @@ const getCurrentTimestamp = () => {
 };
 
 const formatMessage = (msg) => {
-  if (msg === undefined || msg === null) {
-    return ['[Undefined or null value]'];
-  }
   if (typeof msg === 'object') {
     try {
       return JSON.stringify(msg, null, 2).split('\n').map(line => line.trim());
@@ -14,7 +11,7 @@ const formatMessage = (msg) => {
       return ['[Unable to stringify object]'];
     }
   }
-  return [msg.toString()];
+  return [msg || '']; // Ensure that msg is not undefined
 };
 
 const logBase = (type, emoji, message, screenOrFunction = '(not called)', ...messages) => {
@@ -136,7 +133,7 @@ const printBox = (...lines) => {
         return '[Unable to stringify object]';
       }
     }
-    return line;
+    return line || ''; // Ensure that line is not undefined
   }).flat();
 
   console.group(''); // Add group
