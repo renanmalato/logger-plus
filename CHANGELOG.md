@@ -107,3 +107,13 @@ __________________________
 ### Fixed - 1.2.6
 
 - before timeStamp break line
+
+__________________________
+
+## [1.2.7] - 2024-07-19
+
+### Fixed - 1.2.7
+
+- Box method was having trouble to log complex objects, null or undefined
+
+- Fixed not throwing error when Logging undefined, null, and complex objects in all cases
