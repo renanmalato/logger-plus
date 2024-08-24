@@ -17,9 +17,10 @@ const formatMessage = (msg) => {
 const logBase = (type, emoji, message, screenOrFunction = '(not called)', ...messages) => {
   const timestamp = getCurrentTimestamp();
 
-  // If only two arguments are passed, treat the second one as screenOrFunction
-  if (messages.length === 0 && typeof message === 'string' && typeof screenOrFunction === 'string') {
-    messages.push('');
+  // Ensure that screenOrFunction is a string; otherwise, treat it as a message
+  if (typeof screenOrFunction !== 'string') {
+    messages.unshift(screenOrFunction);
+    screenOrFunction = '(not called)';
   }
 
   console.group('');
@@ -47,9 +48,10 @@ const logBase = (type, emoji, message, screenOrFunction = '(not called)', ...mes
 const logError = (message, screenOrFunction = '(not called)', ...messages) => {
   const timestamp = getCurrentTimestamp();
 
-  // If only two arguments are passed, treat the second one as screenOrFunction
-  if (messages.length === 0 && typeof message === 'string' && typeof screenOrFunction === 'string') {
-    messages.push('');
+  // Ensure that screenOrFunction is a string; otherwise, treat it as a message
+  if (typeof screenOrFunction !== 'string') {
+    messages.unshift(screenOrFunction);
+    screenOrFunction = '(not called)';
   }
 
   console.group('');
@@ -77,9 +79,10 @@ const logError = (message, screenOrFunction = '(not called)', ...messages) => {
 const logWarn = (message, screenOrFunction = '(not called)', ...messages) => {
   const timestamp = getCurrentTimestamp();
 
-  // If only two arguments are passed, treat the second one as screenOrFunction
-  if (messages.length === 0 && typeof message === 'string' && typeof screenOrFunction === 'string') {
-    messages.push('');
+  // Ensure that screenOrFunction is a string; otherwise, treat it as a message
+  if (typeof screenOrFunction !== 'string') {
+    messages.unshift(screenOrFunction);
+    screenOrFunction = '(not called)';
   }
 
   console.group('');

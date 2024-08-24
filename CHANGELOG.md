@@ -125,3 +125,12 @@ __________________________
 ### Fixed - 1.2.8
 
 - Added 1 more fall back to 1.2.7 to fix
+
+__________________________
+
+## [1.2.9] - 2024-07-24
+
+### Fixed - 1.2.9
+
+- Log variables from useState true or false 
+- if user acidentally pass variable as second argument will not say from (variable)
