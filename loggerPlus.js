@@ -4,6 +4,10 @@ const getCurrentTimestamp = () => {
 };
 
 const formatMessage = (msg) => {
+  if (msg === true || msg === false) {
+    return [String(msg)];
+  }
+  
   if (typeof msg === 'object') {
     try {
       return JSON.stringify(msg, null, 2).split('\n').map(line => line.trim());
@@ -28,17 +32,21 @@ const logBase = (type, emoji, message, screenOrFunction = '(not called)', ...mes
   console[type](`${emoji} from ${screenOrFunction}`);
   console[type]('---------------------------------');
   console[type]('');
+  
   const lines = formatMessage(message);
   console[type](lines[0]);
   for (let i = 1; i < lines.length; i++) {
     console.log(lines[i]);
   }
+
+  // Handle messages properly, including logging boolean values like false/true
   messages.forEach(msg => {
-    if (msg !== undefined && msg !== '') {
+    if (msg !== undefined) {
       const msgLines = formatMessage(msg);
       msgLines.forEach(line => console.log(line));
     }
   });
+
   console.log(''); // Add a line break before the timestamp
   console[type](`[${timestamp}]`);
   console[type]('');
@@ -65,7 +73,7 @@ const logError = (message, screenOrFunction = '(not called)', ...messages) => {
     console.log(lines[i]);
   }
   messages.forEach(msg => {
-    if (msg !== undefined && msg !== '') {
+    if (msg !== undefined) {
       const msgLines = formatMessage(msg);
       msgLines.forEach(line => console.log(line));
     }
@@ -96,7 +104,7 @@ const logWarn = (message, screenOrFunction = '(not called)', ...messages) => {
     console.log(lines[i]);
   }
   messages.forEach(msg => {
-    if (msg !== undefined && msg !== '') {
+    if (msg !== undefined) {
       const msgLines = formatMessage(msg);
       msgLines.forEach(line => console.log(line));
     }

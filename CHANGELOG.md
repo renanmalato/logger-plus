@@ -132,5 +132,15 @@ __________________________
 
 ### Fixed - 1.2.9
 
-- Log variables from useState true or false 
+- Log variables from useState true or false
 - if user acidentally pass variable as second argument will not say from (variable)
+
+__________________________
+
+## [1.2.10] - 2024-07-24
+
+### Fixed - 1.2.10
+
+- Log variables from useState true or false
+- if user acidentally pass variable as second argument will not say from (variable)
+- recommit
