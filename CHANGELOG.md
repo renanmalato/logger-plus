@@ -144,3 +144,11 @@ __________________________
 - Log variables from useState true or false
 - if user acidentally pass variable as second argument will not say from (variable)
 - recommit
+
+__________________________
+
+## [1.2.11] - 2024-07-24
+
+### Fixed - 1.2.11
+
+- Fixed Type flag on the messages to :any

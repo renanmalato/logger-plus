@@ -1,11 +1,11 @@
 declare module '@renanmalato/logger-plus' {
-  function log(message: string, screenOrFunction?: string, ...messages: string[]): void;
-  function success(message: string, screenOrFunction?: string, ...messages: string[]): void;
-  function info(message: string, screenOrFunction?: string, ...messages: string[]): void;
-  function warn(message: string, screenOrFunction?: string, ...messages: string[]): void;
-  function error(message: string, screenOrFunction?: string, ...messages: string[]): void;
-  function line(message: string, ...messages: string[]): void;
-  function box(...lines: (string | object)[]): void;
+  function log(message: any, screenOrFunction?: string, ...messages: any[]): void;
+  function success(message: any, screenOrFunction?: string, ...messages: any[]): void;
+  function info(message: any, screenOrFunction?: string, ...messages: any[]): void;
+  function warn(message: any, screenOrFunction?: string, ...messages: any[]): void;
+  function error(message: any, screenOrFunction?: string, ...messages: any[]): void;
+  function line(message: any, ...messages: any[]): void;
+  function box(...lines: any[]): void;
 
   const Logger: {
     log: typeof log;
